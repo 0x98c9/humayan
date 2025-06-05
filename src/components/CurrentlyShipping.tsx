@@ -5,7 +5,7 @@ import { title } from 'process';
 
 const workItems = [
     { title: 'Documed', status: 'planning', description: 'Offline toolkit for PDF & image tools.' },
-	{ title: 'Private Journal', status: 'planning', description: 'A privacy-first personal journaling tool.' },
+	{ title: 'Lumen', status: 'completed', description: 'A privacy-first personal journaling tool.' },
 	{ title: 'Brevilo', status: 'development', description: 'AI repurposing SaaS for students.' },
 	{ title: 'WebxZet', status: 'completed', description: 'Hub for free tools and productivity experiments.' },
 	{ title: 'SayHi Link', status: 'completed', description: 'Click-to-chat WhatsApp link generator.' },
