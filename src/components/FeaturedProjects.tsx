@@ -6,6 +6,22 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: "Brevilo",
+    category: "AI SaaS",
+    description: "AI repurposing SaaS for content creators. Built for Bolt Hackathon using OpenAI APIs.",
+    stack: ["OpenAI", "Vite", "Supabase"],
+    link: "#",
+    status: "planning"
+  },
+  {
+    title: "Documed",
+    category: "Desktop App",
+    description: "Offline toolkit for PDF & image tools. Desktop-first, web version coming soon.",
+    stack: ["Tauri", "Rust", "Tailwind CSS"],
+    link: "#",
+    status: "building"
+  },
+  {
     title: "WebxZet",
     category: "Web App",
     description: "Hub for free tools, study utilities, and productivity experiments for students.",
@@ -17,7 +33,7 @@ const projects = [
     title: "SayHi Link",
     category: "Web App",
     description: "Lightweight click-to-chat whatsapp chat links generator.",
-    stack: ["Tauri", "Rust", "TypeScript"],
+    stack: ["Vite", "Tailwind CSS", "TypeScript"],
     link: "https://sayhilink.netlify.app/",
     status: "live"
   },
@@ -25,25 +41,17 @@ const projects = [
     title: "SaveFlow",
     category: "Web App",
     description: "Simple budget tracker for students to manage expenses and savings.",
-    stack: ["React", "TypeScript", "Supabase"],
+    stack: ["React", "TypeScript", "IndexedDB"],
     link: "https://saveflow.onrender.com/",
     status: "live"
   },
   {
-    title: "Brevilo",
-    category: "AI SaaS",
-    description: "AI repurposing SaaS for content creators. Built for Bolt Hackathon using OpenAI APIs.",
-    stack: ["OpenAI", "React", "Supabase"],
-    link: "#",
-    status: "planning"
-  },
-  {
-    title: "Documed",
-    category: "Desktop App",
-    description: "Offline toolkit for PDF & image tools. Desktop-first, web version coming soon.",
-    stack: ["Tauri", "Rust", "PDF.js"],
-    link: "#",
-    status: "building"
+    title: "Lumen",
+    category: "Web App",
+    description: "Your space to reflect, privately, add notes, and track your thoughts.",
+    stack: ["Vite", "Tailwind CSS", "IndexedDB"],
+    link: "https://lumenbook.pages.dev/",
+    status: "live"
   }
 ];
 

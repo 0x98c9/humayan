@@ -10,14 +10,12 @@ const TerminalHero = () => {
     'whoami',
     'ls projects/',
     'cat skills.txt',
-    'echo "Building the future"'
   ];
 
   const terminalOutputs = [
     'Humayan Al Rosid',
     ' webxzet/  sayhilink/  saveflow/  brevilo/  documed/',
     'React • TypeScript • Rust • Tauri • Astro • AI APIs',
-    'Building the future'
   ];
 
   useEffect(() => {
@@ -97,13 +95,13 @@ const TerminalHero = () => {
                     <span className="text-white">:</span>
                     <span className="text-blue-400">~</span>
                     <span className="text-white">$</span>
-                    <span className="text-white">cd portfolio && ./start</span>
+                    <span className="text-white">./start</span>
                   </div>
                   <div className="text-gray-300 ml-4">
                     Starting portfolio server...
                   </div>
                   <div className="text-terminal-green ml-4">
-                    ✓ Server running at localhost:3000
+                    ✓ Server running at humayan.pages.dev
                   </div>
                   <div className="text-gray-400 ml-4">
                     Ready to showcase projects and connect with collaborators.
