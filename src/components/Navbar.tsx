@@ -65,13 +65,13 @@ const Navbar = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="hover:text-terminal-green">
+            <Button variant="ghost" size="icon" className="hover:text-terminal-green" onClick={() => window.open('https://github.com/0x98c9')}>
               <Github className="w-4 h-4" />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:text-terminal-green">
+            <Button variant="ghost" size="icon" className="hover:text-terminal-green" onClick={() => window.open('mailto:humayanalrosid3@gmail.com')}>
               <Mail className="w-4 h-4" />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:text-terminal-green">
+            <Button variant="ghost" size="icon" className="hover:text-terminal-green" onClick={() => window.open('https://twitter.com/0x98c9')}>
               <Twitter className="w-4 h-4" />
             </Button>
           </div>
