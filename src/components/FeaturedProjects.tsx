@@ -30,11 +30,11 @@ const projects = [
     status: "live"
   },
   {
-    title: "SayHi Link",
+    title: "Tazko",
     category: "Web App",
-    description: "Lightweight click-to-chat whatsapp chat links generator.",
+    description: "Create, organize, and track your tasks with simple task management system.",
     stack: ["Vite", "Tailwind CSS", "TypeScript"],
-    link: "https://sayhilink.netlify.app/",
+    link: "https://tazko.pages.dev/",
     status: "live"
   },
   {
