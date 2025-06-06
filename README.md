@@ -12,7 +12,7 @@ A modern, privacy-first portfolio and project showcase for Humayan Al Rosid, a 2
 
 ## 🚀 Live Demo
 
-[Portfolio Website](#-custom-domain)
+[Portfolio Website](https://humayan.pages.dev/)
 
 ## 🛠️ Tech Stack
 

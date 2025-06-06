@@ -4,8 +4,14 @@ import { Badge } from '@/components/ui/badge';
 import { title } from 'process';
 
 const workItems = [
+<<<<<<< HEAD
 	{ title: 'BreviloAI', status: 'planning', description: 'AI repurposing SaaS for students.' },
     { title: 'Documed', status: 'development', description: 'Offline toolkit for PDF & image tools.' },
+=======
+    { title: 'Documed', status: 'planning', description: 'Offline toolkit for PDF & image tools.' },
+	{ title: 'Lumen', status: 'completed', description: 'A privacy-first personal journaling tool.' },
+	{ title: 'Brevilo', status: 'development', description: 'AI repurposing SaaS for students.' },
+>>>>>>> c72400f3083a7183a22d04105c67adb90f82a568
 	{ title: 'WebxZet', status: 'completed', description: 'Hub for free tools and productivity experiments.' },
 	{ title: 'Tazko', status: 'completed', description: 'Create, organize, and track your tasks with simple task management system.' },
 	{ title: 'Lumen', status: 'completed', description: 'Your space to reflect, privately, add notes, and track your thoughts.' },
