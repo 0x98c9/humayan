@@ -14,7 +14,7 @@ const TerminalHero = () => {
 
   const terminalOutputs = [
     'Humayan Al Rosid',
-    ' webxzet/  sayhilink/  saveflow/  brevilo/  documed/',
+    ' webxzet/  fakemint/  tazko/ lumen/  brevilo/  documed/',
     'React • TypeScript • Rust • Tauri • Astro • AI APIs',
   ];
 

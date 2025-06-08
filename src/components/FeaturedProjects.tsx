@@ -38,11 +38,11 @@ const projects = [
     status: "live"
   },
   {
-    title: "SaveFlow",
+    title: "FakeMint",
     category: "Web App",
-    description: "Simple budget tracker for students to manage expenses and savings.",
-    stack: ["React", "TypeScript", "IndexedDB"],
-    link: "https://saveflow.onrender.com/",
+    description: "Generate fake data for testing and development up to 1000 rows.",
+    stack: ["Vite", "TypeScript", "IndexedDB"],
+    link: "https://fakemint.netlify.app/",
     status: "live"
   },
   {
