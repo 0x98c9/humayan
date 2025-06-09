@@ -20,7 +20,6 @@ const Contact = () => (
               <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Collaborations on student tools</li>
               <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Idea validation & feedback</li>
               <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Open source contributions</li>
-              <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Platform integrations</li>
             </ul>
           </CardContent>
         </Card>
@@ -32,7 +31,6 @@ const Contact = () => (
             <ul className="text-left space-y-2 text-sm sm:text-base text-muted-foreground">
               <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Astro + TypeScript</li>
               <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Tauri + Rust</li>
-              <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• AI APIs (OpenAI, etc.)</li>
               <li className="transition-all duration-300 hover:text-foreground hover:translate-x-2">• Privacy-first solutions</li>
             </ul>
           </CardContent>

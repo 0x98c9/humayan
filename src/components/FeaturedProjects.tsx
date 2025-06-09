@@ -6,20 +6,20 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "Brevilo",
-    category: "AI SaaS",
-    description: "AI repurposing SaaS for content creators. Built for Bolt Hackathon using OpenAI APIs.",
-    stack: ["OpenAI", "Vite", "Supabase"],
-    link: "#",
-    status: "planning"
-  },
-  {
-    title: "Documed",
+    title: "4xFlow",
     category: "Desktop App",
-    description: "Offline toolkit for PDF & image tools. Desktop-first, web version coming soon.",
-    stack: ["Tauri", "Rust", "Tailwind CSS"],
+    description: "Offline productivity app to manage tasks, ideas, and projects with a sleek interface.",
+    stack: ["Tauri", "Rust", "Tailwind", "Vite"],
     link: "#",
     status: "building"
+  },
+  {
+    title: "4xShell",
+    category: "Web App",
+    description: "A premium-looking typescript-based web terminal. 25+ commands, 8+ themes, and more.",
+    stack: ["TypeScript", "Vite", "Tailwind"],
+    link: "https://4xshell.pages.dev",
+    status: "live"
   },
   {
     title: "WebxZet",

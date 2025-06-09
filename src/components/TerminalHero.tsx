@@ -14,8 +14,8 @@ const TerminalHero = () => {
 
   const terminalOutputs = [
     'Humayan Al Rosid',
-    ' webxzet/  fakemint/  tazko/ lumen/  brevilo/  documed/',
-    'React • TypeScript • Rust • Tauri • Astro • AI APIs',
+    'webxzet/  fakemint/  tazko/ lumen/  4xShell/  4xFlow/',
+    'React • TypeScript • Rust • Tauri • Astro • Vite',
   ];
 
   useEffect(() => {
