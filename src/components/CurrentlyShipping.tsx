@@ -4,12 +4,12 @@ import { Badge } from '@/components/ui/badge';
 import { title } from 'process';
 
 const workItems = [
-	{ title: '4xFlow', status: 'development', description: 'Offline productivity app to manage tasks, ideas, and projects.' },
+	{ title: 'GPA Snap', status: 'planning', description: 'A web app to help students track and manage their GPA effectively.' },
+	{ title: '4xFlow', status: 'completed', description: 'Offline productivity app to manage tasks, ideas, and projects.' },
     { title: '4xShell', status: 'completed', description: 'A premium-looking typescript-based web terminal.' },
 	{ title: 'WebxZet', status: 'completed', description: 'Hub for free tools and productivity experiments.' },
 	{ title: 'FakeMint', status: 'completed', description: 'Generate fake data for testing and development up to 1000 rows.' },
 	{ title: 'Tazko', status: 'completed', description: 'Create, organize, and track your tasks with simple task management system.' },
-	{ title: 'Lumen', status: 'completed', description: 'Your space to reflect, privately, add notes, and track your thoughts.' },
 ];
 
 const statusIcon = (status: string) => {

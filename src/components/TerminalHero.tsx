@@ -14,7 +14,7 @@ const TerminalHero = () => {
 
   const terminalOutputs = [
     'Humayan Al Rosid',
-    'webxzet/  fakemint/  tazko/ lumen/  4xShell/  4xFlow/',
+    'webxzet/  fakemint/  4xShell/  4xFlow/  tazko/  gpa-snap/',
     'React • TypeScript • Rust • Tauri • Astro • Vite',
   ];
 

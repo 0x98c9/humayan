@@ -6,12 +6,20 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: "GPA Snap",
+    category: "Web App",
+    description: "A web app to help students track and manage their GPA effectively.",
+    stack: ["Vite", "Tailwind CSS", "IndexedDB"],
+    link: "#",
+    status: "planning"
+  },
+  {
     title: "4xFlow",
     category: "Desktop App",
     description: "Offline productivity app to manage tasks, ideas, and projects with a sleek interface.",
     stack: ["Tauri", "Rust", "Tailwind", "Vite"],
-    link: "#",
-    status: "building"
+    link: "https://fourxflow.pages.dev/",
+    status: "live"
   },
   {
     title: "4xShell",
@@ -43,14 +51,6 @@ const projects = [
     description: "Generate fake data for testing and development up to 1000 rows.",
     stack: ["Vite", "TypeScript", "IndexedDB"],
     link: "https://fakemint.netlify.app/",
-    status: "live"
-  },
-  {
-    title: "Lumen",
-    category: "Web App",
-    description: "Your space to reflect, privately, add notes, and track your thoughts.",
-    stack: ["Vite", "Tailwind CSS", "IndexedDB"],
-    link: "https://lumenbook.pages.dev/",
     status: "live"
   }
 ];
