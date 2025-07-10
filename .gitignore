@@ -118,4 +118,14 @@ out/
 *.swo
 *~
 
+# Copilot instructions - keep local only
+.copilot-instructions.md
+copilot-instructions.md
 .github/copilot-instructions.md
+
+# Allow other .github/ content while hiding copilot instructions
+.github/
+!.github/workflows/
+!.github/ISSUE_TEMPLATE/
+!.github/PULL_REQUEST_TEMPLATE.md
+!.github/README.md
