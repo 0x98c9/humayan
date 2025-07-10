@@ -117,3 +117,5 @@ out/
 *.swp
 *.swo
 *~
+
+.github/copilot-instructions.md
