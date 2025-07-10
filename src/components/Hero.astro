@@ -1,0 +1,58 @@
+---
+import { ArrowRight, Download, ExternalLink } from 'lucide-astro';
+---
+
+<section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-8 lg:py-16">
+  <div class="max-w-4xl mx-auto text-center animate-stagger">
+    <!-- Main Headline -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+      Building tools for the
+      <span class="text-blue-500 relative inline-block">
+        next generation
+        <div class="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-60"></div>
+      </span>
+      of learners
+    </h1>
+    
+    <!-- Subtext -->
+    <p class="text-base sm:text-lg md:text-xl text-slate-400 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+      Self-taught developer focused on <span class="text-slate-300 font-medium">open tools</span>, 
+      <span class="text-slate-300 font-medium">clean design</span> & 
+      <span class="text-slate-300 font-medium">purposeful code</span>.
+      <span class="block sm:inline mt-1 sm:mt-0">Building educational technology that makes learning accessible and engaging.</span>
+    </p>
+    
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4 sm:px-0">
+      <a 
+        href="#projects" 
+        class="group inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto text-sm sm:text-base"
+      >
+        View Projects
+        <ArrowRight size={16} class="sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+      </a>
+      
+      <a 
+        href="#contact" 
+        class="group inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-medium transition-all duration-200 hover:bg-slate-800 w-full sm:w-auto text-sm sm:text-base"
+      >
+        Contact Me
+        <ExternalLink size={16} class="sm:w-5 sm:h-5 transition-transform group-hover:scale-110" />
+      </a>
+    </div>
+    
+    <!-- Status Indicator -->
+    <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-500 bg-slate-800/50 px-3 sm:px-4 py-2 rounded-full border border-slate-700 mx-4 sm:mx-0 max-w-full">
+      <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
+      <span class="text-center leading-tight">
+        <span class="block sm:inline">Core developer at <a href="http://edutips.in" class="font-semibold">EduTips</a></span>
+      </span>
+    </div>
+  </div>
+  
+  <!-- Subtle Background Effect -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/4 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-cyan-500/5 rounded-full blur-3xl"></div>
+  </div>
+</section>

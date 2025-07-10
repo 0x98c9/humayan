@@ -1,0 +1,121 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Self-taught developer building tools for the next generation of learners" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Global Styles -->
+    <style>
+      html {
+        font-family: 'Inter', system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-200 antialiased">
+    <slot />
+    
+    <!-- Scroll Animation Script -->
+    <script>
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            
+            // Add visible class for staggered animations
+            if (element.classList.contains('animate-stagger')) {
+              element.classList.add('visible');
+            }
+            
+            // Trigger individual animations
+            if (element.classList.contains('animate-on-scroll')) {
+              if (element.classList.contains('animate-fade-in-up')) {
+                element.style.animation = 'fadeInUp 0.8s ease-out forwards';
+              } else if (element.classList.contains('animate-fade-in-left')) {
+                element.style.animation = 'fadeInLeft 0.8s ease-out forwards';
+              } else if (element.classList.contains('animate-fade-in-right')) {
+                element.style.animation = 'fadeInRight 0.8s ease-out forwards';
+              } else if (element.classList.contains('animate-slide-in-up')) {
+                element.style.animation = 'slideInUp 0.8s ease-out forwards';
+              } else if (element.classList.contains('animate-scale-in')) {
+                element.style.animation = 'scaleIn 0.8s ease-out forwards';
+              } else if (element.classList.contains('animate-fade-in')) {
+                element.style.animation = 'fadeIn 0.8s ease-out forwards';
+              }
+            }
+            
+            // Unobserve after animation to improve performance
+            observer.unobserve(element);
+          }
+        });
+      }, observerOptions);
+
+      // Wait for DOM to be ready
+      document.addEventListener('DOMContentLoaded', () => {
+        // Observe all elements with animation classes
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-stagger');
+        animatedElements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

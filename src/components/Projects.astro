@@ -1,0 +1,139 @@
+---
+import { Github, ExternalLink, Clock, CheckCircle, Wrench } from 'lucide-astro';
+import { projects } from '../data/projects';
+
+const getStatusIcon = (status: string) => {
+  switch (status) {
+    case 'live':
+      return CheckCircle;
+    case 'coming-soon':
+      return Clock;
+    case 'in-progress':
+      return Wrench;
+    default:
+      return CheckCircle;
+  }
+};
+
+const getStatusText = (status: string) => {
+  switch (status) {
+    case 'live':
+      return 'Live';
+    case 'coming-soon':
+      return 'Coming Soon';
+    case 'in-progress':
+      return 'In Progress';
+    default:
+      return 'Live';
+  }
+};
+
+const getStatusColor = (status: string) => {
+  switch (status) {
+    case 'live':
+      return 'text-green-400';
+    case 'coming-soon':
+      return 'text-yellow-400';
+    case 'in-progress':
+      return 'text-blue-400';
+    default:
+      return 'text-green-400';
+  }
+};
+---
+
+<section id="projects" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12 sm:mb-16 animate-on-scroll animate-fade-in-up">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Featured Projects</h2>
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0">
+        A collection of live projects solving real problems. From productivity tools to developer utilities, 
+        each built with focus on clean design and user experience.
+      </p>
+    </div>
+    
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 animate-stagger">
+      {projects.slice(0, 6).map((project) => {
+        const StatusIcon = getStatusIcon(project.status);
+        return (
+          <div class="group bg-slate-800 rounded-xl p-4 sm:p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl hover:shadow-slate-900/50 animate-card">
+            <!-- Project Header -->
+            <div class="flex items-start justify-between mb-3 sm:mb-4">
+              <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors pr-2">
+                {project.name}
+              </h3>
+              <div class={`flex items-center gap-1 text-xs sm:text-sm ${getStatusColor(project.status)} flex-shrink-0`}>
+                <StatusIcon size={14} class="sm:w-4 sm:h-4" />
+                <span class="hidden sm:inline">{getStatusText(project.status)}</span>
+              </div>
+            </div>
+            
+            <!-- Description -->
+            <p class="text-slate-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
+              {project.description}
+            </p>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              {project.tags.map((tag) => (
+                <span class="px-2 py-1 text-xs bg-slate-700 text-slate-300 rounded-md border border-slate-600 whitespace-nowrap">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
+              {project.stack.map((tech) => (
+                <span class="px-2 py-1 text-xs bg-blue-500/10 text-blue-400 rounded-md border border-blue-500/20 whitespace-nowrap">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            <!-- Action Links -->
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              {project.githubUrl && (
+                <a 
+                  href={project.githubUrl}
+                  class="inline-flex items-center justify-center sm:justify-start gap-2 text-slate-400 hover:text-white transition-colors group/link py-2 sm:py-0"
+                  aria-label={`View ${project.name} on GitHub`}
+                >
+                  <Github size={16} class="sm:w-5 sm:h-5" />
+                  <span class="text-sm">Code</span>
+                  <ExternalLink size={12} class="sm:w-3.5 sm:h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                </a>
+              )}
+              
+              {project.liveUrl && (
+                <a 
+                  href={project.liveUrl}
+                  class="inline-flex items-center justify-center sm:justify-start gap-2 text-blue-400 hover:text-blue-300 transition-colors group/link py-2 sm:py-0"
+                  aria-label={`View ${project.name} live demo`}
+                >
+                  <ExternalLink size={16} class="sm:w-5 sm:h-5" />
+                  <span class="text-sm">Live Demo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+    
+    <!-- View More -->
+    <div class="text-center mt-12">
+      <a 
+        href="https://github.com" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors group"
+      >
+        <span>View more projects on GitHub</span>
+        <ExternalLink size={16} class="transition-transform group-hover:translate-x-1" />
+      </a>
+    </div>
+  </div>
+</section>

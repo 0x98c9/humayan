@@ -1,0 +1,295 @@
+---
+import {
+    Mail,
+    Github,
+    Linkedin,
+    Copy,
+    ExternalLink,
+    Instagram,
+} from "lucide-astro";
+---
+
+<section
+    id="contact"
+    class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
+>
+    <div class="max-w-4xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12 sm:mb-16 animate-on-scroll animate-fade-in-up">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+                Let's Connect
+            </h2>
+            <p
+                class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0"
+            >
+                Interested in collaborating or have a question? I'd love to hear
+                from you. Let's build something amazing together.
+            </p>
+        </div>
+
+        <!-- Contact Information - 2 Column Layout -->
+        <div class="max-w-4xl mx-auto">
+            <div
+                class="bg-slate-800 rounded-xl p-6 sm:p-8 border border-slate-700 animate-on-scroll animate-scale-in"
+            >
+                <h3
+                    class="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8 text-center"
+                >
+                    Get in Touch
+                </h3>
+
+                <!-- 2 Column Grid for Social Links -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <!-- Left Column -->
+                    <div class="space-y-4 sm:space-y-6 animate-stagger">
+                        <!-- Row 1: Email -->
+                        <div class="flex items-center gap-3 sm:gap-4 group">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors flex-shrink-0"
+                            >
+                                <Mail
+                                    size={20}
+                                    class="text-blue-400 sm:w-6 sm:h-6"
+                                />
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div
+                                    class="text-slate-300 font-medium text-sm sm:text-base"
+                                >
+                                    Email
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <a
+                                        href="mailto:humayanalrosid3@gmail.com"
+                                        class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base truncate"
+                                    >
+                                        humayanalrosid3[at]gmail.com
+                                    </a>
+                                    <button
+                                        onclick="copyToClipboard('humayanalrosid3@gmail.com')"
+                                        class="text-slate-500 hover:text-blue-400 transition-colors p-1 flex-shrink-0"
+                                        aria-label="Copy email address"
+                                    >
+                                        <Copy size={14} class="sm:w-4 sm:h-4" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: LinkedIn -->
+                        <div class="flex items-center gap-3 sm:gap-4 group">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-600/10 rounded-lg flex items-center justify-center border border-blue-600/20 group-hover:bg-blue-600/20 transition-colors flex-shrink-0"
+                            >
+                                <Linkedin
+                                    size={20}
+                                    class="text-blue-400 sm:w-6 sm:h-6"
+                                />
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div
+                                    class="text-slate-300 font-medium text-sm sm:text-base"
+                                >
+                                    LinkedIn
+                                </div>
+                                <a
+                                    href="https://linkedin.com/in/humayanalrosid"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-sm sm:text-base"
+                                >
+                                    <span class="truncate"
+                                        >/in/humayanalrosid</span
+                                    >
+                                    <ExternalLink
+                                        size={12}
+                                        class="flex-shrink-0 sm:w-3.5 sm:h-3.5"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Bluesky -->
+                        <div class="flex items-center gap-3 sm:gap-4 group">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 bg-sky-500/10 rounded-lg flex items-center justify-center border border-sky-500/20 group-hover:bg-sky-500/20 transition-colors flex-shrink-0"
+                            >
+                                <!-- Custom Bluesky Icon -->
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 512 512"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="text-sky-400 sm:w-6 sm:h-6"
+                                >
+                                    <path
+                                        d="M243.695,179.339c0.703,4.906,5.813,7.438,7.719,1.406c1.891-6.031-4.828-17.219-22.219-36.531 c-14.828-16.484-35.625-39.391-23.844-51.578c14.609-10.078,8.469-27.75-4.172-29.469c-11.313-1.516-21.609,13.578-15.031,38.703 C192.711,126.964,241.695,165.292,243.695,179.339z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M445.898,83.886c-74.469,0-160.703,89.859-174.516,111.078c-3.594-4.578-9.109-7.578-15.375-7.578 c-6.281,0-11.797,3-15.391,7.578C226.805,173.73,140.57,83.886,66.102,83.886c-76.828,0-70.547,68.984-59.578,112.891 c10.969,43.922,56.453,92.516,106.609,94.094c-56.438,25.078-61.141,89.375-43.891,119.156 c16.359,28.25,103.266,92.016,167.156-50.296v29.141c0,10.813,8.781,19.593,19.609,19.593c10.813,0,19.594-8.781,19.594-19.593 v-29.156c63.891,142.328,150.813,78.562,167.156,50.312c17.25-29.781,12.547-94.078-43.891-119.156 c50.172-1.578,95.641-50.172,106.609-94.094C516.445,152.871,522.727,83.886,445.898,83.886z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M268.305,179.339c2-14.047,50.984-52.375,57.563-77.469c6.563-25.125-3.734-40.219-15.047-38.703 c-12.641,1.719-18.766,19.391-4.172,29.469c11.781,12.188-9.016,35.094-23.844,51.578c-17.391,19.313-24.109,30.5-22.219,36.531 C262.492,186.777,267.602,184.246,268.305,179.339z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div
+                                    class="text-slate-300 font-medium text-sm sm:text-base"
+                                >
+                                    Bluesky
+                                </div>
+                                <a
+                                    href="https://bsky.app/profile/webxzet.tech"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-sm sm:text-base"
+                                >
+                                    <span class="truncate">@webxzet.tech</span>
+                                    <ExternalLink
+                                        size={12}
+                                        class="flex-shrink-0 sm:w-3.5 sm:h-3.5"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-4 sm:space-y-6 animate-stagger">
+                        <!-- Row 1: GitHub -->
+                        <div class="flex items-center gap-3 sm:gap-4 group">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 bg-slate-700 rounded-lg flex items-center justify-center border border-slate-600 group-hover:bg-slate-600 transition-colors flex-shrink-0"
+                            >
+                                <Github
+                                    size={20}
+                                    class="text-slate-300 sm:w-6 sm:h-6"
+                                />
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div
+                                    class="text-slate-300 font-medium text-sm sm:text-base"
+                                >
+                                    GitHub
+                                </div>
+                                <a
+                                    href="https://github.com/0x98c9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-sm sm:text-base"
+                                >
+                                    <span class="truncate">@0x98c9</span>
+                                    <ExternalLink
+                                        size={12}
+                                        class="flex-shrink-0 sm:w-3.5 sm:h-3.5"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Instagram -->
+                        <div class="flex items-center gap-3 sm:gap-4 group">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 bg-pink-500/10 rounded-lg flex items-center justify-center border border-pink-500/20 group-hover:bg-pink-500/20 transition-colors flex-shrink-0"
+                            >
+                                <Instagram
+                                    size={20}
+                                    class="text-pink-400 sm:w-6 sm:h-6"
+                                />
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div
+                                    class="text-slate-300 font-medium text-sm sm:text-base"
+                                >
+                                    Instagram
+                                </div>
+                                <a
+                                    href="https://instagram.com/x6sony"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-sm sm:text-base"
+                                >
+                                    <span class="truncate">@x6sony</span>
+                                    <ExternalLink
+                                        size={12}
+                                        class="flex-shrink-0 sm:w-3.5 sm:h-3.5"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Additional space for future social link -->
+                        <div
+                            class="flex items-center gap-3 sm:gap-4 group opacity-50"
+                        >
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 bg-slate-600/10 rounded-lg flex items-center justify-center border border-slate-600/20 transition-colors flex-shrink-0"
+                            >
+                                <ExternalLink
+                                    size={20}
+                                    class="text-slate-500 sm:w-6 sm:h-6"
+                                />
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div
+                                    class="text-slate-500 font-medium text-sm sm:text-base"
+                                >
+                                    More coming soon
+                                </div>
+                                <div
+                                    class="text-slate-600 text-sm sm:text-base"
+                                >
+                                    Additional platforms
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Info -->
+                <div
+                    class="mt-8 bg-slate-700/50 rounded-lg p-4 sm:p-6 border border-slate-600"
+                >
+                    <h4
+                        class="text-base sm:text-lg font-medium text-white mb-2 sm:mb-3 text-center"
+                    >
+                        Response Time
+                    </h4>
+                    <p class="text-slate-300 text-sm mb-3 sm:mb-4 text-center">
+                        I typically respond to emails within 24-48 hours. For
+                        quick updates, feel free to follow me on social media.
+                    </p>
+                    <div
+                        class="flex items-center justify-center gap-2 text-xs sm:text-sm"
+                    >
+                        <div
+                            class="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"
+                        >
+                        </div>
+                        <span class="text-green-400"
+                            >Available for projects</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for copy functionality -->
+<script>
+    function copyToClipboard(text: string) {
+        navigator.clipboard.writeText(text).then(() => {
+            // You could add a toast notification here
+            console.log("Email copied to clipboard");
+        });
+    }
+
+    // Make function globally available
+    (window as any).copyToClipboard = copyToClipboard;
+</script>
